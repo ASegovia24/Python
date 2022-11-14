@@ -9,3 +9,4 @@ if __name__ == "__main__":
     ventana1 = Ventana()
     ventana1.show()
     app.exec()
+//
