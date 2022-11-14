@@ -10,7 +10,7 @@ class Ventana (QMainWindow):
 
         self.lbl = QLabel(self)
         self.lbl.setFixedSize(50,30)
-        self.lbl.move(0,50)
+        self.lbl.move(50,0)
         
         self.ledt.textChanged.connect(self.lbl.setText)
 
