@@ -9,17 +9,17 @@ class Ventana (QMainWindow):
         super().__init__()
         self.setWindowTitle("Ventana de prueba")
         
-        self.ledt = QDateTimeEdit(self,calendarPopup=True)
-        self.ledt.setFixedSize(110,30)
+        self.QDate = QDateTimeEdit(self,calendarPopup=True)
+        self.QDate.setFixedSize(110,30)
         #self.ledt.setMaxLength(5)
 
         self.lbl = QLabel(self)
         self.lbl.setFixedSize(110,30)
         self.lbl.move(115,0)
 
-        self.ledt.dateTimeChanged.connect(self.time)
+        self.QDate.dateTimeChanged.connect(self.time)
     def time(self):
-        time = self.ledt.dateTime()
+        time = self.QDate.dateTime()
         self.lbl.setText(time.toString("dd-MM-yyyy HH:mm"))
 
 
