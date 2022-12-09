@@ -35,20 +35,26 @@ class VentanaPrincipal(QMainWindow):
         layout_verticalP.addLayout(layout_vertical1)
 
         layout_horizontal01.addWidget(QLabel('Usuario: '))
-        layout_horizontal01.addWidget(self.ledt2)
+        layout_horizontal01.addWidget(self.ledt1)
 
         layout_horizontal02.addWidget(QLabel('Contrasena: '))
-        layout_horizontal02.addWidget(self.ledt1)
+        layout_horizontal02.addWidget(self.ledt2)
         
         layout_vertical1.addWidget(self.btn1)
         layout_vertical1.addWidget(self.lbl)
 
         self.btn1.clicked.connect(self.clicDeBoton)
     def clicDeBoton(self):
-        if(self.ledt2.text == 'con'):
+        if(self.ledt1.text() == 'user' and self.ledt2.text() == 'contr' ):
+            self.lbl.setStyleSheet("color: green;font: bold 16px;")
             self.lbl.setText("Usuario aceptado")
+
+
         else:
             self.lbl.setText("Usuario denegado")
+            self.lbl.setStyleSheet("color: red;font: bold 16px;")
+
+
         
 
 
